@@ -1,0 +1,13 @@
+import { test, expect } from '@playwright/test';
+
+test('Verify removing multiple items from cart', async ({ page }) => {
+    await page.goto('https://www.saucedemo.com/inventory.html');
+
+    await page.click('button:has-text("Add to cart") >> nth=0');
+    await page.click('button:has-text("Add to cart") >> nth=1');
+
+    await page.click('.shopping_cart_link');
+
+    await page.click('button:has-text("Remove") >> nth=0');
+    await expect(page.locator('.cart_item')).toHaveCount(1);
+});
