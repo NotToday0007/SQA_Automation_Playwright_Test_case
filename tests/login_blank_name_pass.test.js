@@ -1,3 +1,4 @@
+import { test, expect } from '@playwright/test';
 test('Login with blank username and password', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     

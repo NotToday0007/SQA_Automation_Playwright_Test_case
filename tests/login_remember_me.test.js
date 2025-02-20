@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-
 test('Verify Remember Me functionality', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 

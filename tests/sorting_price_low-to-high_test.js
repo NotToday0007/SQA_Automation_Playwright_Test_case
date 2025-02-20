@@ -1,3 +1,4 @@
+import { test, expect } from '@playwright/test';
 test('Sort products from Low to High price', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     
